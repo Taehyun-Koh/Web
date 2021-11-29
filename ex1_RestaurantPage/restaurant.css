@@ -1,0 +1,129 @@
+.wrapper{
+display: grid;
+grid-template-columns: 15% 85%;
+align-items: stretch;
+
+}
+a{
+  text-decoration-line: none;
+}
+.menu{
+  display:grid;
+  flex-wrap: wrap;
+}
+
+.top{
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #3b2d2f;
+  grid-template-columns: 1fr 3fr 0.3fr;
+  padding:10px;
+}
+.icon{
+  grid-column: 1/2;
+}
+.login{
+  grid-column: 3/4;
+}
+
+.leftmenu{
+  grid-column: 1/2;
+  grid-row: 2/8;
+  background-color: #3b2d2f;
+}
+
+.maintitle{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-size: 30px;
+  background-image: url('/assets/bg_main.png');
+  background-repeat: no-repeat;
+  background-size: 3000px 2200px;
+
+}
+
+.explain{
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  grid-template-columns:0.5fr 1fr 3fr 0.5fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 50px;
+}
+.chef{
+  grid-column: 2/3;
+  grid-row: 1/3;
+  padding: 20px;
+}
+.words1{
+  grid-column: 3/4;
+  grid-row:1/2;
+  padding: 20px;
+}
+.words2{
+  grid-column: 3/4;
+  grid-row: 2/3;
+  padding: 20px;
+}
+.welcome{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.specialOrder{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  grid-column: 2/3;
+  grid-row: 4/5;
+  background-image: url('/assets/bg_offer.png');
+  background-size: contain;
+}
+
+.offers_title{
+  grid-column: 2/3;
+}
+.insideoffers{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: white;
+}
+
+.specialMenu{
+  display:grid;
+  grid-column: 2/3;
+  grid-row: 5/6;
+  padding: 20px;
+}
+.menu_title{
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.menu_item1{
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.menu_item2{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.menu_item3{
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.contactus{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 2/3;
+  grid-row: 6/7;
+  background-color: #3b2d2f;
+}
+.contactword{
+  grid-column: 1/2;
+}
+.contact_info{
+  grid-column: 3/4;
+}

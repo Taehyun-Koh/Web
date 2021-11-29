@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="atm.css">
+    <link rel="stylesheet" href=
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+  </head>
+  <body>
+
+  <div id="container1"><center>
+    <div class="title">SKKU ATM</div>
+    <div id="explain">Enter your 16 digit account number or
+      insert your card below:</div>
+    <div id="login">
+      <input type="password" id="account" class="input"><br><br>
+      <div class="account_keypad">
+        <button class="keypad" id="btn1" onclick="send_account(1)">1</button>
+        <button class="keypad" id="btn2" onclick="send_account(2)">2</button>
+        <button class="keypad" id="btn3" onclick="send_account(3)">3</button><br><br>
+        <button class="keypad" id="btn4" onclick="send_account(4)">4</button>
+        <button class="keypad" id="btn5" onclick="send_account(5)">5</button>
+        <button class="keypad" id="btn6" onclick="send_account(6)">6</button><br><br>
+        <button class="keypad" id="btn7" onclick="send_account(7)">7</button>
+        <button class="keypad" id="btn8" onclick="send_account(8)">8</button>
+        <button class="keypad" id="btn9" onclick="send_account(9)">9</button><br><br>
+        <button class="keypad" id="btnEnter1">Enter</button>
+        <button class="keypad" id="btn5" onclick="send_account(0)">0</button>
+        <button class="keypad" id="btnDelete1" onclick="delete_account()">Delete</button>
+      </div>
+    </div>
+  </center></div>
+
+  <div id="container2" class="hide"><center>
+    <div id="pwd">
+      <div id="pintitle">Please enter your PIN:</div>
+      <input type="password" id="password" class="input"><br><br>
+      <div class="account_keypad">
+        <button class="keypad" id="btn1" onclick="send_pwd(1)">1</button>
+        <button class="keypad" id="btn2" onclick="send_pwd(2)">2</button>
+        <button class="keypad" id="btn3" onclick="send_pwd(3)">3</button><br><br>
+        <button class="keypad" id="btn4" onclick="send_pwd(4)">4</button>
+        <button class="keypad" id="btn5" onclick="send_pwd(5)">5</button>
+        <button class="keypad" id="btn6" onclick="send_pwd(6)">6</button><br><br>
+        <button class="keypad" id="btn7" onclick="send_pwd(7)">7</button>
+        <button class="keypad" id="btn8" onclick="send_pwd(8)">8</button>
+        <button class="keypad" id="btn9" onclick="send_pwd(9)">9</button><br><br>
+        <button class="keypad" id="btnEnter2">Enter</button>
+        <button class="keypad" id="btn5" onclick="send_pwd(0)">0</button>
+        <button class="keypad" id="btnDelete2" onclick="delete_pwd()">Delete</button>
+      </div>
+    </div>
+  </center></div>
+
+  <div id="container3" class="hide"><center>
+      <div class="title">WELCOME TO SKKU BANK</div><br><br>
+      <button class="mainmenu" id="info" onclick="info_function()">Account Information</button><br><br>
+      <button class="mainmenu" id="withdraw" onclick="withdraw_function()">Withdraw Funds</button><br><br>
+      <button class="mainmenu" id="deposit" onclick="deposit_function()">Deposit Funds</button><br><br>
+      <button class="mainmenu" id="transfer" onclick="transfer_function()">Transfer</button><br><br>
+      <button type="button" class="returnCard" id="rtn1" onclick="returnCard()">returnCard</button>
+  </center></div>
+
+
+
+  <div id="info_container" class="hide"><center>
+    <div class="title">Account Information</div><br><br>
+    <div id= "current_balance">Current Balance: $<span id="balance"></span></div><br>
+    <table class="table table-striped">
+      <thead>
+        <th scope="col">Date</th>
+        <th scope="col">Funds Out</th>
+        <th scope="col">Funds In</th>
+        <th scope="col">Running Balance</th>
+      </thead>
+      <tbody id="table_body"></tbody>
+    </table>
+    <button type="button" class="backBtn">Back</button>
+  </center></div>
+
+
+  <div id="withdraw_container" class="container_wd hide">
+    <div class="left">
+      <h4><br><br>Quick Links<br></h4>
+      <button type="button" class="quickBtn" id="wd20" onclick="wd_reset(20)">$20</button><br><br><br><br><br><br>
+      <button type="button" class="quickBtn" id="wd40" onclick="wd_reset(40)">$40</button><br><br><br><br><br><br>
+      <button type="button" class="quickBtn" id="wd60" onclick="wd_reset(60)">$60</button><br><br><br><br><br><br>
+      <button type="button" class="quickBtn" id="wd80" onclick="wd_reset(80)">$80</button>
+    </div>
+    <div class="mid">
+      <p><h3>Enter the amount to withdraw<br><br></h3></p>
+      <input type="button" id="up_100" onclick="wd_plus(100)"></input><br><br>
+      <input type="button" id="up_20" onclick="wd_plus(20)"></input><br><br>
+      <div class="input-group">
+        <input id="withdraw_ammount" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+        <div class="input-group-append">
+          <span class="input-group-text">$</span><br><br>
+        </div>
+      </div>
+      <input type="button" id="down_20" onclick="wd_minus(20)"></input><br><br>
+      <input type="button" id="down_100" onclick="wd_minus(100)"></input>
+    </div>
+    <div class="right">
+      <h4><br><br>Quick Links<br></h4>
+      <button type="button" class="quickBtn" id="wd100" onclick="wd_reset(100)">$100</button><br><br><br><br><br><br>
+      <button type="button" class="quickBtn" id="wd200" onclick="wd_reset(200)">$200</button><br><br><br><br><br><br>
+      <button type="button" class="quickBtn" id="wd300" onclick="wd_reset(300)">$300</button><br><br><br><br><br><br>
+      <button type="button" class="quickBtn" id="wd400" onclick="wd_reset(400)">$400</button><br><br><br><br><br><br>
+      <button type="button" class="enterBtn" id="enterForWithdraw" onclick="to_withdraw_check()">Enter</button>
+      <button type="button" class="backBtn" id="backForWithdraw">Back</button>
+    </div>
+</div>
+
+  <div id="withdraw_check" class="hide">
+    <center><div class="title">Withdraw</div>
+    <div id= "current_balance">$<span id="withdraw_money"></span>?</div><br>
+    <button type="button" class="yesBtn" id="yesForWithdraw" onclick="to_withdraw_confirm()">Yes</button>
+    <button type="button" class="noBtn" id="noForWithdraw" onclick="check_to_withdraw()">No</button></center>
+  </div>
+
+  <div id="withdraw_confirm" class="hide">
+    <center><div><h2>Money has been withdrawn.</h2></div><br><br>
+      <img src="checkmark.png"><br><br><br>
+      <button type="button" class="homeBtn" onclick="withdraw_to_menu()">Home</button>
+      <button type="button" class="backToWithdrawBtn" onclick="confirm_to_withdraw()">Perform Another Withdraw</button>
+      <button type="button" class="returnCard" onclick="returnCard()">returnCard</button>
+
+  </center></div>
+
+  <div id="deposit_container" class="hide"><center>
+    <div><h2><br><br>  Enter the amount of deposit</h2></div><br>
+    <input id="deposit_input" class="input" placeholder="$0000.00"
+    style="width:230px;height:50px;font-size:30px;"><br><br>
+    <div class="account_keypad">
+      <button class="keypad_ver2" id="btn1" onclick="send_deposit(1)">1</button>
+      <button class="keypad_ver2" id="btn2" onclick="send_deposit(2)">2</button>
+      <button class="keypad_ver2" id="btn3" onclick="send_deposit(3)">3</button><br><br>
+      <button class="keypad_ver2" id="btn4" onclick="send_deposit(4)">4</button>
+      <button class="keypad_ver2" id="btn5" onclick="send_deposit(5)">5</button>
+      <button class="keypad_ver2" id="btn6" onclick="send_deposit(6)">6</button><br><br>
+      <button class="keypad_ver2" id="btn7" onclick="send_deposit(7)">7</button>
+      <button class="keypad_ver2" id="btn8" onclick="send_deposit(8)">8</button>
+      <button class="keypad_ver2" id="btn9" onclick="send_deposit(9)">9</button><br><br>
+      <button class="keypad_ver2" id="btn0" onclick="send_deposit(0)">0</button>
+      <button class="keypad_ver2" id="btn." onclick="send_deposit('.')">.</button>
+      <button class="keypad_ver2" id="btnDelete3" onclick="delete_deposit()">Del</button><br><br>
+      <button class="keypad_ver2" id="btnEnter3" onclick="deposit_to_check()">Enter</button>
+    </div>
+    <button type="button" class="backBtn">Back</button>
+  </center></div>
+
+  <div id="deposit_check" class="hide"><center>
+    <div class="title">Are you sure you want to deposit the amount specified?</div><br><br>
+    <div id="current_deposit">$<span id="deposit_money"></span>?</div><br>
+    <button type="button" class="yesBtn" id="yesForDeposit" onclick="to_deposit_check2()">Yes</button>
+    <button type="button" class="noBtn" id="noForDeposit" onclick="check_to_deposit()">No</button>
+  </center></div>
+
+  <div id="deposit_check2" class="hide"><center>
+    <div class="title">Enter the specified amount of money into the ATM.</div><br><br><br><br>
+    <button class="mainmenu" id="ok_" onclick="to_deposit_confirm()">OK</button>
+  </center></div>
+
+  <div id="deposit_confirm" class="hide">
+    <center><div><h2>Money has been deposited.</h2></div><br><br>
+      <img src="checkmark.png"><br><br><br>
+      <button type="button" class="homeBtn" onclick="deposit_to_menu()">Home</button>
+      <button type="button" class="backToWithdrawBtn" onclick="confirm_to_deposit()">Deposit again</button>
+      <button type="button" class="returnCard" onclick="returnCard()">returnCard</button></center>
+  </div>
+
+  <div id="transfer_container" class="container_tf hide">
+    <div class="left">
+      <div class="title">From</div>
+      <div class="input-group mb-3">
+        <select class="custom-select" id="from_account" aria-label="Example select with button addon">
+          <option selected>Choose an Account</option>
+          <option value="1234567890123456">1234567890123456</option>
+        </select>
+      </div>
+    </div>
+    <div class="mid">
+      <br><br><input id="transfer_input" class="input" placeholder="$0000.00"
+      style="width:230px;height:50px;font-size:30px;"><br><br>
+      <div class="account_keypad">
+        <button class="keypad_ver2" id="btn1" onclick="send_transfer(1)">1</button>
+        <button class="keypad_ver2" id="btn2" onclick="send_transfer(2)">2</button>
+        <button class="keypad_ver2" id="btn3" onclick="send_transfer(3)">3</button><br><br>
+        <button class="keypad_ver2" id="btn4" onclick="send_transfer(4)">4</button>
+        <button class="keypad_ver2" id="btn5" onclick="send_transfer(5)">5</button>
+        <button class="keypad_ver2" id="btn6" onclick="send_transfer(6)">6</button><br><br>
+        <button class="keypad_ver2" id="btn7" onclick="send_transfer(7)">7</button>
+        <button class="keypad_ver2" id="btn8" onclick="send_transfer(8)">8</button>
+        <button class="keypad_ver2" id="btn9" onclick="send_transfer(9)">9</button><br><br>
+        <button class="keypad_ver2" id="btn0" onclick="send_transfer(0)">0</button>
+        <button class="keypad_ver2" id="btn." onclick="send_transfer('.')">.</button>
+        <button class="keypad_ver2" id="btnDelete4" onclick="delete_transfer()">Del</button><br><br>
+        <button class="keypad_ver2" id="btnEnter4" onclick="transfer_to_check()">Enter</button>
+      </div>
+    </div>
+    <div class="right">
+      <div class="title">To</div>
+      <div class="input-group mb-3">
+        <select class="custom-select" id="to_account" aria-label="Example select with button addon">
+          <option selected>Choose an Account</option>
+          <option value="1234567887654321">1234567887654321</option>
+          <option value="1234561234567890">1234561234567890</option>
+          <option value="9876541234560789">9876541234560789</option>
+        </select>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <button type="button" class="backBtn">Back</button>
+    </div>
+  </div>
+
+  <div id="transfer_check" class="hide"><center>
+    <div class="title">Transfer?</div><br><br>
+    <div id="transfer_dollar"><h3>$ <span id="tf_dollar_check"></span></h3></div><br>
+    <div id="from_transfer"><h3>From <span id="from__"></span></h3></div><br>
+    <div id="to_transfer"><h3>To <span id="to__"></span></h3></div><br>
+    <button type="button" class="yesBtn" id="yesForTransfer" onclick="transfer_check_to_confirm()">Yes</button>
+    <button type="button" class="noBtn" id="noForTransfer" onclick="check_to_transfer()">No</button>
+  </center></div>
+
+  <div id="transfer_confirm" class="hide">
+    <center><div><h2>Money has been transfered.</h2></div><br><br>
+      <img src="assets/checkmark.png"><br><br><br>
+      <button type="button" class="homeBtn" onclick="transfer_to_menu()">Home</button>
+      <button type="button" class="backToWithdrawBtn" onclick="confirm_to_transfer()">Perform Another Transaction</button>
+      <button type="button" class="returnCard" onclick="returnCard()">returnCard</button>
+    </center>
+  </div>
+
+  <script type="text/javascript" src="ATM.js"></script>
+  </body>
+</html>

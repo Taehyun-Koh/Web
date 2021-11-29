@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href=
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form">
+        <div class="tab-header">
+          <div class="active" id="tologin">Login</div>
+          <div id="toreg">Sign Up</div>
+        </div>
+        <div class="tab-content">
+          <div class="tab-body active login">
+            <div class="ex1">Login</div><br>
+            <div class="ex2" id="checking">Enter user name and password:</div><br>
+            <div class="ex3">Email</div>
+            <div class="form-element">
+              <table>
+                <th><input type="text" placeholder="Email" id="email_login"><img class="img_ hide" id="emailcheck" src="check.jpg" alt="My Image"></th>
+                <th><div class="warning__ hide" id="email_login_warn">Your email address is invalid!</div></th>
+              </table>
+            </div>
+            <div class="ex3">Password</div>
+            <div class="form-element">
+              <table>
+                <th><input type="password" placeholder="Password" id="pwd_login"><img class="img_ hide" id="pwdcheck" src="check.jpg" alt="My Image"></th>
+                <th><div class="warning__ hide" id="pwd_login_warn">Please enter your password!</div></th>
+              </table>
+            </div>
+            <div class="form-element">
+              <button id="loginbtn">Login</button>
+            </div>
+          </div>
+
+          <div class="tab-body sign">
+            <div class="form-element">
+              <div class="ex1">Sign up</div><br>
+              <div class="ex2">Fill in the form:</div>
+            </div>
+
+            <div class="form-element">
+              <div class="ex3">First name</div>
+              <table>
+                <th><input type="text" placeholder="First name" id="firstname"><img class="img_ hide" id="fncheck" src="check.jpg" alt="My Image"></th>
+                <th><div class="warning_ hide" id="fn_warn">Please enter your first name!</div></th>
+              </table>
+
+              <div class="ex3">Last name</div>
+              <table>
+                <th><input type="text" placeholder="Last name" id="lastname"><img class="img_ hide" id="lncheck" src="check.jpg" alt="My Image"></th>
+                <th>  <div class="warning_ hide" id="ln_warn">Please enter your last name!</div></th>
+              </table>
+
+              <table>
+                <th><input type="checkbox" id="male">
+                    <label for="male">Male</label>
+                    <input type="checkbox" id="female">
+                    <label for="female">Female</label><img class="img_ hide" id="gendercheck" src="check.jpg" alt="My Image"></th>
+                <th><div class="warning_ hide" id="gender_warn">Please select your gender!</div></th>
+              </table>
+
+
+              <div class="ex3">Email</div>
+              <table>
+                <th><input type="email" placeholder="Email" id="email_sign"><img class="img_ hide" id="emailcheck_sign" src="check.jpg" alt="My Image"></th>
+                <th><div class="warning_ hide" id="email_warn">Please enter your email!</div></th>
+              </table>
+
+              <div class="ex3">Password</div>
+              <table>
+                <th><input type="text" placeholder="Password" id="pw_sign"><img class="img_ hide" id="pwdcheck_sign" src="check.jpg" alt="My Image"></th>
+                <th><div class="warning_ hide" id="pw_warn">Please enter your password!</div></th>
+              </table>
+
+              <div class="ex3">Confirm password</div>
+              <table>
+                <th><input type="text" placeholder="Confirm password" id="repw"><img class="img_ hide" id="repwdcheck" src="check.jpg" alt="My Image"></th>
+                <th><div class="warning_ hide" id="repw_warn">Please re-enter your password!</div></th>
+              </table>
+
+
+            </div>
+            <div class="form-element">
+              <button id="signbtn">Sign Up</button>
+            </div>
+
+          </div>
+
+          <div id="success_final">
+            You are logged in.
+        </div>
+
+            <div id="success">
+              You are signed up.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="login.js"></script>
+  </body>
+</html>

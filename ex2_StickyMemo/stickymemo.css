@@ -1,0 +1,67 @@
+.main {
+  background-color: #E8F5E9;
+}
+
+html {
+  background-color: #E8F5E9;
+}
+
+body {
+  margin-top: 20px;
+}
+
+#tasker {
+  color: green;
+  font-weight: bold;
+}
+
+.toptop {
+  background-color: white;
+}
+
+.card1 {
+  background-color: white;
+  position: relative;
+  flex-basis: content;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  border: 0 solid transparent;
+  margin: 15px;
+  text-align: center;
+  width: 300px;
+  padding-top: 10px;
+}
+
+#modal_title {
+  font-weight: bolder;
+}
+
+#trash {
+  color: red;
+  float: right;
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+
+.note-title {
+  font-weight: bold;
+  padding: 15px;
+  font-size: 15px;
+}
+
+#taskImg {
+  width: 300px;
+  height: 200px;
+}
+
+.taskType {
+  display: inline-block;
+  color: white;
+  background-color: blue;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}

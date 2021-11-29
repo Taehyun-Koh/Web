@@ -1,0 +1,475 @@
+*{
+  font-family: Consolas, sans-serif;
+  background-color: #EBF5FF;
+}
+input{
+  vertical-align: middle;
+}
+table{
+  border-collapse:collapse;
+  table-layout: auto;
+}
+th,td{
+  border : 1px solid gray;
+}
+.title{
+  font-size: 50px;
+  color:#00B9FF;
+}
+#explain{
+  margin: 10px;
+}
+#login{
+  padding: 10px;
+}
+
+.keypad{
+  display:inline-block;
+    color:white;
+    font-size: 20px;
+    width:100px;
+    padding:20px;
+    background:#3CB4FF;
+    border:1px solid #3CB4FF;
+    text-align:center;
+    text-decoration:none;
+    transition-property:all;/*속성값*/
+    transition-duration:0.3s;/*효과를 완료하는데 걸리는 시간*/
+    transition-timing-function:ease-in-out;/*효과의 속도곡선*/
+    transition-delay:5;/*효과의 지연되는 시간*/
+}
+.keypad:active{
+  background:#fff;
+  color:#59b1eb;
+  border:1px solid #3CB4FF;
+  transition-property:all;/*속성값*/
+  transition-duration:0.1s;/*효과를 완료하는데 걸리는 시간*/
+  transition-timing-function:ease-in-out;/*효과의 속도곡선*/
+  transition-delay:0;/*효과의 지연되는 시간*/
+}
+
+.keypad_ver2{
+  display:inline-block;
+    color:black;
+    font-size: 15px;
+    font-weight: bold;
+    width:60px;
+    padding:15px;
+    background:#bebebe;
+    border:2px solid black;
+    text-align:center;
+    text-decoration:none;
+    transition-property:all;/*속성값*/
+    transition-duration:0.3s;/*효과를 완료하는데 걸리는 시간*/
+    transition-timing-function:ease-in-out;/*효과의 속도곡선*/
+    transition-delay:5;/*효과의 지연되는 시간*/
+}
+.keypad_ver2:active{
+  background:black;
+  color:#bebebe;
+  border:1px solid #bebebe;
+  transition-property:all;/*속성값*/
+  transition-duration:0.1s;/*효과를 완료하는데 걸리는 시간*/
+  transition-timing-function:ease-in-out;/*효과의 속도곡선*/
+  transition-delay:0;/*효과의 지연되는 시간*/
+}
+#btnEnter3{
+  width:200px;
+}
+#pintitle{
+  font-size: 30px;
+  padding: 10px;
+}
+#pwd{
+  padding:10px;
+}
+#btnEnter1,#btnEnter2,#btnEnter3,#btnEnter4{
+  color:green;
+}
+#btnDelete1,#btnDelete2,#btnDelete3,#btnDelete4{
+  color:red;
+}
+
+.mainmenu{
+  display:inline-block;
+  	color:#fff;
+    font-size: 30px;
+  	width:500px;
+  	height:50px;
+  	line-height:50px;
+  	background:navy;
+  	border:1px solid navy;
+  	text-align:center;
+  	text-decoration:none;
+  	transition-property:all;/*속성값*/
+  	transition-duration:0.3s;/*효과를 완료하는데 걸리는 시간*/
+  	transition-timing-function:ease-in-out;/*효과의 속도곡선*/
+  	transition-delay:0;/*효과의 지연되는 시간*/
+}
+.mainmenu:hover{
+    /*마우스 오버했을때의 효과*/
+	background:#fff;
+	color:navy;
+	transition-property:all;/*속성값*/
+	transition-duration:0.3s;/*효과를 완료하는데 걸리는 시간*/
+	transition-timing-function:ease-in-out;/*효과의 속도곡선*/
+	transition-delay:0;/*효과의 지연되는 시간*/
+	}
+#current_balance{
+  font-size: 30px;
+}
+#current_deposit{
+  font-size: 30px;
+}
+
+
+.quickBtn{
+  display:inline-block;
+  color:#fff;
+  font-size: 30px;
+  width:100px;
+	height:50px;
+  line-height:50px;
+  background:#2c3e50;
+  border:1px solid black;
+  text-align:center;
+  text-decoration:none;
+  transition-property:all;
+  transition-duration:0.3s;
+  transition-timing-function:ease-in-out;
+  transition-delay:0;
+}
+.quickBtn:hover{
+  background:white;
+	color:black;
+	transition-property:all;
+	transition-duration:0.3s;
+	transition-timing-function:ease-in-out;
+	transition-delay:0;
+}
+
+.container_wd,.container_tf{
+  text-align:center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.left{
+  grid-column: 1/2;
+}
+.mid{
+  grid-column: 2/3;
+}
+.right{
+  grid-column: 3/4;
+}
+
+
+#up_100 {
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: url(/assets/uparrow100copy.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-size: cover;
+}
+#up_100:hover{
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: url(/assets/uparrow100copyhover.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-size: cover;
+}
+#up_100:active{
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: url(/assets/uparrow100.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-size: cover;
+}
+#up_20 {
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: url(/assets/uparrow20copy.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-size: cover;
+}
+#up_20:hover{
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: url(/assets/uparrow20copyhover.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-size: cover;
+}
+#up_20:active{
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: url(/assets/uparrow20.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-size: cover;
+}
+
+#down_20 {
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: url(/assets/downarrow20copy.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-size: cover;
+}
+#down_20:hover{
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: url(/assets/downarrow20copyhover.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-size: cover;
+}
+#down_20:active{
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: url(/assets/downarrow20.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-size: cover;
+}
+#down_100 {
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: url(/assets/downarrow100copy.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-size: cover;
+}
+#down_100:hover{
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: url(/assets/downarrow100copyhover.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-size: cover;
+}
+#down_100:active{
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: url(/assets/downarrow100.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-size: cover;
+}
+#rtn1{
+  float:right;
+}
+
+#deposit_input{
+  text-align: center;
+}
+.backBtn{
+  display:inline-block;
+  	color:#fff;
+    font-size: 30px;
+  	width:100px;
+  	height:50px;
+  	line-height:50px;
+  	background:orange;
+  	border:1px solid orange;
+  	text-align:center;
+  	text-decoration:none;
+  	transition-property:all;
+  	transition-duration:0.3s;
+  	transition-timing-function:ease-in-out;
+  	transition-delay:0;
+    float : right;
+}
+.backBtn:hover{
+  background:#fff;
+	color:orange;
+	transition-property:all;
+	transition-duration:0.3s;
+	transition-timing-function:ease-in-out;
+	transition-delay:0;
+}
+
+.enterBtn{
+  display:inline-block;
+  color:#fff;
+  font-size: 30px;
+  width:100px;
+  height:50px;
+  line-height:50px;
+  background:skyblue;
+  border:1px solid skyblue;
+  text-align:center;
+  text-decoration:none;
+  transition-property:all;
+  transition-duration:0.3s;
+  transition-timing-function:ease-in-out;
+  transition-delay:0;
+  float : right;
+}
+.enterBtn:hover{
+  background:#fff;
+	color:skyblue;
+	transition-property:all;
+	transition-duration:0.3s;
+	transition-timing-function:ease-in-out;
+	transition-delay:0;
+}
+
+.yesBtn{
+  display:inline-block;
+  color:#fff;
+  font-size: 30px;
+  width:100px;
+  height:50px;
+  line-height:50px;
+  background:skyblue;
+  border:1px solid skyblue;
+  text-align:center;
+  text-decoration:none;
+  transition-property:all;
+  transition-duration:0.3s;
+  transition-timing-function:ease-in-out;
+  transition-delay:0;
+}
+.yesBtn:hover{
+  background:white;
+	color:skyblue;
+	transition-property:all;
+	transition-duration:0.3s;
+	transition-timing-function:ease-in-out;
+	transition-delay:0;
+}
+
+.noBtn{
+  display:inline-block;
+  	color:#fff;
+    font-size: 30px;
+  	width:100px;
+  	height:50px;
+  	line-height:50px;
+  	background:orange;
+  	border:1px solid orange;
+  	text-align:center;
+  	text-decoration:none;
+  	transition-property:all;
+  	transition-duration:0.3s;
+  	transition-timing-function:ease-in-out;
+  	transition-delay:0;
+}
+.noBtn:hover{
+  background:#fff;
+	color:orange;
+	transition-property:all;
+	transition-duration:0.3s;
+	transition-timing-function:ease-in-out;
+	transition-delay:0;
+}
+
+.homeBtn{
+  display:inline-block;
+  	color:#fff;
+    font-size: 20px;
+  	width:100px;
+  	height:50px;
+  	line-height:50px;
+  	background:#1E3269;
+  	border:1px solid #1E3269;
+  	text-align:center;
+  	text-decoration:none;
+  	transition-property:all;
+  	transition-duration:0.3s;
+  	transition-timing-function:ease-in-out;
+  	transition-delay:0;
+}
+.homeBtn:hover{
+  background:#fff;
+	color:#1E3269;
+	transition-property:all;
+	transition-duration:0.3s;
+	transition-timing-function:ease-in-out;
+	transition-delay:0;
+}
+
+.backToWithdrawBtn{
+  display:inline-block;
+  	color:#fff;
+    font-size: 20px;
+  	width:350px;
+  	height:50px;
+  	line-height:50px;
+  	background:#1E3269;
+  	border:1px solid #1E3269;
+  	text-align:center;
+  	text-decoration:none;
+  	transition-property:all;
+  	transition-duration:0.3s;
+  	transition-timing-function:ease-in-out;
+  	transition-delay:0;
+}
+.backToWithdrawBtn:hover{
+  background:#fff;
+	color:#1E3269;
+	transition-property:all;
+	transition-duration:0.3s;
+	transition-timing-function:ease-in-out;
+	transition-delay:0;
+}
+
+.returnCard{
+  display:inline-block;
+  	color:#fff;
+    font-size: 20px;
+  	width:170px;
+  	height:50px;
+  	line-height:50px;
+  	background:#FF4646;
+  	border:1px solid #FF4646;
+  	text-align:center;
+  	text-decoration:none;
+  	transition-property:all;
+  	transition-duration:0.3s;
+  	transition-timing-function:ease-in-out;
+  	transition-delay:0;
+}
+.returnCard:hover{
+  background:#fff;
+	color:#FF4646;
+	transition-property:all;
+	transition-duration:0.3s;
+	transition-timing-function:ease-in-out;
+	transition-delay:0;
+}
+
+.hide{
+  display: none;
+}
