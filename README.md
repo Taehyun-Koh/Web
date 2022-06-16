@@ -5,7 +5,7 @@
 <center><img width="800" alt="atm_2" src="https://user-images.githubusercontent.com/94899919/174044529-3f72e294-0192-4632-95b3-bfd034938bee.png"></center>
 
 ## 2)영화 예매 사이트
-<center><img width="800" alt="movie" src="https://user-images.githubusercontent.com/94899919/174048869-b2c0c027-09d3-419e-b863-10c95d813f15.png"></center>
+<center><img width="800" alt="movie" src="https://user-images.githubusercontent.com/94899919/174050550-3dc923a0-135e-4fde-ad13-aaef8994f236.png"></center>
 
 ## 3)식당
 <center><img width="800" alt="restaurant" src="https://user-images.githubusercontent.com/94899919/174049136-a4a6465f-2d64-4e3b-95cb-1126a3d38559.png"></center>
