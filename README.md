@@ -7,7 +7,7 @@
 ## 2)영화 예매 사이트
 <center><img width="800" alt="movie" src="https://user-images.githubusercontent.com/94899919/174050550-3dc923a0-135e-4fde-ad13-aaef8994f236.png"></center>
 
-## 3)식당 소개 
+## 3)식당 소개 사이트
 <center><img width="800" alt="restaurant" src="https://user-images.githubusercontent.com/94899919/174049136-a4a6465f-2d64-4e3b-95cb-1126a3d38559.png"></center>
 
 ## 4)메모장
